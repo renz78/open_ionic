@@ -129,7 +129,7 @@ export class ProductsPage {
       console.log(data);
     })
   }
-//изменение многиг параметров
+//изменение многих параметров
   changeProduct(product_id: any, quantity: any, price: any){
     console.log(product_id + '' + quantity + '' + price);
     this.rez = this.httpClient.get('http://www.maxshop.in.ua/products.php?event=updproduct&product_id='+product_id+'&quantity='+quantity+'&price='+price+'');
