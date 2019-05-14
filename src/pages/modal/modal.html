@@ -1,0 +1,37 @@
+<ion-header>
+
+  <ion-navbar>
+      <ion-title>Редактирование товара</ion-title>
+      <ion-buttons end>
+      <button ion-button (click)="closeModal()">Close</button>
+      </ion-buttons>
+  </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+    <form #form="ngForm" (ngSubmit)="logForm(form)">
+      <ion-item>
+        <ion-label>ID</ion-label>
+        <ion-input type="text" [(ngModel)]="product_id" name="product_id"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Название</ion-label>
+        <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Количество</ion-label>
+        <ion-input type="number" [(ngModel)]="quantity" name="quantity"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Цена</ion-label>
+        <ion-input type="number" [(ngModel)]="price" name="price"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Статус</ion-label>
+        <ion-checkbox [(ngModel)]="ch" name="status"></ion-checkbox>
+      </ion-item>
+      <button ion-button type="submit" block>Редактировать</button>
+    </form>
+  </ion-content>

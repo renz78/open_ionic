@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Сканер</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <!-- <div>
+    <ion-input style="background-color:gray" type="text" [(ngModel)]="encodeText"></ion-input>
+    <button ion-button block (click)="encode()">Encode</button>
+  </div> -->
+  <div>
+    <button ion-button block (click)="scan()">Сканировать</button>
+    <div *ngIf="scannedData.text">
+      <label for="">Код товара:</label>
+      <br>
+      <span>{{scannedData.text}}</span>
+    </div>
+  </div>
+</ion-content>
