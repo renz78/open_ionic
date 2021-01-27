@@ -2,16 +2,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
+import { Camera } from '@ionic-native/camera/ngx';
+
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { ScannerPage } from '../pages/scanner/scanner';
+import { CameraPage } from '../pages/camera/camera';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductsPage } from '../pages/products/products';
+
 import { IonicStorageModule } from '@ionic/storage';
 // import { ModalPage } from '../pages/modal/modal';
 
@@ -22,6 +26,7 @@ import { IonicStorageModule } from '@ionic/storage';
     ListPage,
     ScannerPage,
     ProductsPage,
+    CameraPage,
     // ModalPage
   ],
   imports: [
@@ -37,9 +42,11 @@ import { IonicStorageModule } from '@ionic/storage';
     ListPage,
     ScannerPage,
     ProductsPage,
+    CameraPage,
     // ModalPage
   ],
   providers: [
+    Camera,
     StatusBar,
     SplashScreen,
     BarcodeScanner,

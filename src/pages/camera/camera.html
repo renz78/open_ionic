@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Камера</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div>
+    <button ion-button block (click)="captureImage()">Фото</button>
+    
+  </div>
+  
+ 
+ <img [src]="clickedImage" />
+</ion-content>

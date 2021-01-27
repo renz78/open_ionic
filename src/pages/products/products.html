@@ -11,35 +11,12 @@
 
 
 <ion-content padding>
-  <ion-searchbar 
-    (ionInput)="getItems($event)">
-  </ion-searchbar>
+  
+  
   <ion-list>
-    <ion-item-sliding *ngFor="let prod of prodarr">
-        <ion-item [color]=" prod.status == 1  ? 'white' : 'light'">
-          <ion-avatar item-start>
-            <img class="prodimg" src="//maxshop.in.ua/image/{{ prod.image }}">
-          </ion-avatar>  
-          {{ prod.name }} || {{ prod.price }} грн. || {{ prod.quantity }} шт.
-          <div class="item-note" item-end>
-            <button ion-button color="secondary" (click)="doAdd(prod)" >
-              <ion-icon name="add" is-active="false"></ion-icon>
-              
-            </button>
-            <button ion-button color="danger" (click)="doDel(prod)" >
-                <ion-icon name='remove' is-active="false"></ion-icon>
-                
-            </button>
-            <button ion-button (click)="openModal(prod)">
-                <ion-icon name='build' is-active="false"></ion-icon>
-                
-            </button>
-            <!-- <button ion-button (click)="openModal()">Open Modal</button> -->
-          </div>  
-        </ion-item>
-        
-    </ion-item-sliding>    
-    
+    <button ion-item *ngFor="let film of (films | async)?.results" (click)="openDetails(film)">
+      {{ film.title }}
+    </button>
   </ion-list>
 </ion-content>
 
